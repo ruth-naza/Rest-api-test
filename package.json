@@ -4,7 +4,7 @@
   "description": "A restful api test",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "npm app.js"
   },
   "author": "Ruth Agbasimalo",
   "license": "ISC",
