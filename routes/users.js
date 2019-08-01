@@ -67,7 +67,11 @@ router.patch('/:userId', async (req, res) => {
   try{
     const UpdatedUser = await User.updateOne(
       { _id: req.params.userId}, 
-      {$set: { firstname: req.body.firstname, lastname: req.body.lastname}})
+      {$set: { firstname: req.body.firstname, 
+        lastname: req.body.lastname,
+        gender: req.body.gender,
+        date_of_birth: req.body.date_of_birth
+      }})
     res.status(200).json({ message: 'User has been updated' });
   }catch(err) {
     res.status(400).json({ message: 'User not found' });
